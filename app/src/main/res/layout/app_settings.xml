@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_settings_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88888888"
+    android:visibility="invisible">
+
+    <LinearLayout
+        android:id="@+id/app_setting_main"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.65"
+        android:background="@color/my_primary"
+        android:clickable="true"
+        android:fontFamily="sans-serif"
+        android:orientation="vertical"
+        android:paddingTop="24dp">
+        <!--1.0 header-->
+
+        <RelativeLayout
+            android:id="@+id/app_settings_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/my_primary"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/app_settings_clear_btn"
+                android:text="@string/settings"
+                android:textColor="@color/button_background"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/app_settings_clear_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="false"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/abc_vector_test" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/icons"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/app_settings_change_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/icons"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_map_black_24dp"
+                        app:tint="@color/my_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Close Map"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!--2.0 change map-->
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_f5"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="5dp"
+                    android:text="Basic"
+                    android:textColor="@color/my_main_color"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/app_settings_use_voice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/icons"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="4dp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:alpha="0.8"
+                        android:scaleType="centerInside"
+                        android:src="@android:drawable/ic_btn_speak_now"
+                        app:tint="@color/my_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/voice_navi"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app_settings_map_directory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/icons"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="4dp">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:alpha="0.8"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_cloud_download_black_24dp"
+                        app:tint="@color/my_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Maps Directory"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app_settings_map_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/icons"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="4dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:alpha="0.8"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_icon_pocketmaps"
+                        app:tint="@color/my_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Map Style"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app_settings_map_auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/icons"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="4dp">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:alpha="0.8"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_settings_white_24dp"
+                        app:tint="@color/my_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/autoselect_map"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app_settings_export"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/icons"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="8dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/exp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app_settings_unit_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/icons"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="12dp">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:alpha="0.8"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_space_bar_white_24dp"
+                        app:tint="@color/my_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/units"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+                <!-- Tracking -->
+
+                <!-- Tracking -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_f5"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/navigation"
+                    android:textColor="@color/my_main_color"
+                    android:textSize="16sp" />
+                <!--Navigation-->
+
+
+                <LinearLayout
+                    android:id="@+id/app_settings_navigation_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical">
+
+                    <!--4.1 alternate route-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/icons"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="4dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="30dp"
+                            android:alpha="0.8"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_directions_white_24dp"
+                            app:tint="@color/my_main_color" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/alternate_route"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <!--4.1  radio group: weighting-->
+                    <RadioGroup
+                        android:id="@+id/app_settings_weighting_rbtngroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/app_settings_fastest_rbtn"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:buttonTint="@color/my_main_color"
+                            android:drawableRight="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="@string/fastest"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/app_settings_shortest_rbtn"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:button="@null"
+                            android:buttonTint="@color/my_main_color"
+                            android:drawableRight="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="@string/shortest"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+
+                    <!-- directions -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:text="Navigation"
+                            android:textSize="16sp" />
+
+                        <Switch
+                            android:id="@+id/app_settings_directions_cb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:thumbTint="@color/my_main_color" />
+
+                    </LinearLayout>
+
+                    <!-- light_sensor -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/txt_light"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:text="Light-Sensor"
+                            android:textSize="16sp" />
+
+                        <Switch
+                            android:id="@+id/app_settings_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:thumbTint="@color/my_main_color" />
+
+
+                    </LinearLayout>
+
+                    <!-- voice -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/txt_voice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:text="Voice"
+                            android:textSize="16sp" />
+
+                        <Switch
+                            android:id="@+id/app_settings_voice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:thumbTint="@color/my_main_color" />
+
+
+                    </LinearLayout>
+
+                    <!-- show_speed -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/txt_showspeed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:text="@string/show_speed"
+                            android:textSize="16sp" />
+
+                        <Switch
+                            android:id="@+id/app_settings_showspeed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:thumbTint="@color/my_main_color" />
+
+
+                    </LinearLayout>
+
+                    <!-- speak_speed -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/txt_speakspeed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:text="@string/speak_speed"
+                            android:textSize="16sp" />
+
+                        <Switch
+                            android:id="@+id/app_settings_speakspeed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:thumbTint="@color/my_main_color" />
+
+
+                    </LinearLayout>
+
+                    <!-- Smoothen movement (Kalman Filter) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/txt_smooth"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:text="@string/gps_smooth"
+                            android:textSize="16sp" />
+
+                        <Switch
+                            android:id="@+id/app_settings_smooth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:thumbTint="@color/my_main_color" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setting_back"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.35"
+        android:clickable="true"
+        android:orientation="horizontal"></LinearLayout>
+
+</LinearLayout>

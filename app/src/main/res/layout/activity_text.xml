@@ -1,0 +1,56 @@
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" >
+
+  <ImageView
+      android:id="@+id/imageView5"
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      app:srcCompat="@drawable/permission" />
+
+  <LinearLayout
+      android:id="@+id/button_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:orientation="horizontal"
+      android:paddingLeft="15dp"
+      android:paddingRight="15dp"
+      android:paddingBottom="15dp">
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/red_button_background"
+        android:text="@string/cancel"
+        android:textColor="@color/icons" />
+
+    <Button
+        android:id="@+id/okTextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/green_button_background"
+        android:text="OK"
+        android:textColor="@color/icons"></Button>
+  </LinearLayout>
+
+  <EditText
+      android:id="@+id/areaText"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_above="@id/button_layout"
+      android:layout_below="@id/imageView5"
+      android:gravity="center"
+      android:inputType="none"></EditText>
+
+</RelativeLayout>

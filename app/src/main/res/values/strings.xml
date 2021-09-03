@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">Phial Map</string>
+    <string name="mapbox_access_token" translatable="false">sk.eyJ1IjoieW9uZ3NoZW5nbGlhbiIsImEiOiJjam93dmx0aGoyMXkzM3BybnYzY2MzcjRoIn0.FjG6XWvZuM14iwHTZENTDQ</string>
+    <string name="map_view_styleUrl" translatable="false">https://osm.spectrumtracking.com/styles/ciw6czz2n00242kmg6hw20box/style.json</string>
+    <string name="on_google_map">On Google Map</string>
+    <!-- The "day" style used for navigation -->
+    <string name="navigation_guidance_day" translatable="false">https://osm.spectrumtracking.com/styles/ciw6czz2n00242kmg6hw20box/style.json</string>
+    <!-- The "night" style used for navigation -->
+    <string name="navigation_guidance_night" translatable="false">https://osm.spectrumtracking.com/styles/ciw6czz2n00242kmg6hw20box/style.json</string>
+
+    <string name="gh_key" translatable="false">f3ec1f9b-d32d-4619-90da-ba9ac5fd6712</string>
+    <!-- This is the endpoint for the routing API, please note this endpoint might change in the future, please contact GraphHopper if you want to publish an app using this endpoint-->
+    <string name="base_url" translatable="false">https://graphhopper.com/api/1/navigate/</string>
+    <string name="title_activity_main">Map Setting</string>
+    <string name="error_valid_route_not_found">Valid route not found.</string>
+    <string name="title_activity_map">Map</string>
+    <string name="action_quit">Quit</string>
+    <string name="show_my_position">Show My Position</string>
+    <string name="title_activity_main_activity2">MainActivity2Activity</string>
+    <string name="weighting_shortest">Shortest</string>
+    <string name="weighting_fastest">Fastest</string>
+    <string name="use_current_location">Use Current Location</string>
+    <string name="from_location">From Location</string>
+    <string name="to_location">To Location</string>
+    <string name="from_loc">From</string>
+    <string name="to_loc">To</string>
+    <string name="choose_from_favorite">Choose from favorite</string>
+    <string name="enter_lat_lon">Enter latitude longitude</string>
+    <string name="point_on_map">Point on map</string>
+    <string name="travel_mode">Travel mode</string>
+    <string name="travel_mode_foot">Foot</string>
+    <string name="travel_mode_bike">Bike</string>
+    <string name="travel_mode_car">Car</string>
+    <string name="time">Time</string>
+    <string name="distance">Distance</string>
+    <string name="stop_navigation">Stop navigation</string>
+    <string name="stop_navigation_msg">dismiss current navigation?</string>
+    <string name="delete_msg">Confirm to delete!</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="save">Save</string>
+    <string name="stop">Stop</string>
+    <string name="h_m">h:m</string>
+    <string name="select_offline_map">Please Select Offline Map!</string>
+    <string name="settings">Settings</string>
+    <string name="change_map">Close map view</string>
+    <string name="download_map">Download map</string>
+    <string name="navigation">Navigation</string>
+    <string name="alternate_route">Alternate route</string>
+    <string name="error_calculating_route">There was an error calculating the route</string>
+    <string name="fastest">Fastest</string>
+    <string name="shortest">Shortest</string>
+    <string name="directions_navi">Directions and navigation</string>
+    <string name="title_activity_select">Select a map</string>
+    <string name="title_activity_download">Download maps</string>
+    <string name="remove">Remove</string>
+    <string name="loading_dotdotdot">Loading ...</string>
+    <string name="path_finding">Pathfinding</string>
+    <string name="search_location">Search location</string>
+    <string name="tracking_stop">stop</string>
+    <string name="tracking_start">start</string>
+    <string name="nav_start">start</string>
+    <string name="tracking_load">load</string>
+    <string name="dialog_stop_save_tracking">Stop and save tracking ?</string>
+    <string name="title_activity_analytics">Analytics</string>
+    <string name="visit_home_page">Visit home page</string>
+    <string name="title_activity_about">About</string>
+    <string name="locale_code">Locale code</string>
+    <string name="location">Location</string>
+    <string name="search_engine">Search engine</string>
+    <string name="add_address">Add address</string>
+    <string name="title">Title</string>
+    <string name="add_text">Additional text</string>
+    <string name="rate_pocket_maps">Rate Phial Map</string>
+    <string name="swipe_out">Swipe out to delete</string>
+    <string name="dont_show_again">Dont show again</string>
+    <string name="wrong_direction">Wrong direction</string>
+    <string name="wait_for_location">Waiting for location</string>
+    <string name="light_navi">Use Light-Sensor</string>
+    <string name="voice_navi">Use Voice</string>
+    <string name="switch_maps_dir">Switch maps directory</string>
+    <string name="needs_vers_lollipop">Needs at least Android-version 21</string>
+    <string name="autoselect_map">Select map automatically</string>
+    <string name="autoselect_map_text">Start app everytime in selected map.</string>
+    <string name="imp">Import</string>
+    <string name="exp">Export</string>
+    <string name="units">Select unit type</string>
+    <string name="units_imperal">Imperal units</string>
+    <string name="units_metric">Metric units</string>
+    <string name="gps_is_off">GPS is turned off</string>
+    <string name="gps_settings">GPS settings</string>
+    <string name="gps_smooth">Smoothen movement</string>
+    <string name="show_speed">Show speed</string>
+    <string name="speak_speed">Speak speed</string>
+    <string name="search_hint">Enter text</string>
+    <string name="any_voice">Any voice</string>
+    <string name="engine_startup">TTS engine is starting up ...</string>
+    <string name="edit">Edit</string>
+    <string name="help">Help</string>
+    <string name="navivoice_wrongdir">Wrong direction</string>
+    <string name="navivoice_in">In</string>
+    <string name="navivoice_meters">meters</string>
+    <string name="navivoice_feet">feet</string>
+    <string name="navivoice_useround">use roundabout</string>
+    <string name="navivoice_turnxxx">turn xxx</string>
+    <string name="navivoice_keepxxx">keep xxx</string>
+    <string name="navivoice_left">left</string>
+    <string name="navivoice_right">right</string>
+    <string name="navivoice_slightl">slight left</string>
+    <string name="navivoice_slightr">slight right</string>
+    <string name="navivoice_sharpl">sharp left</string>
+    <string name="navivoice_sharpr">sharp right</string>
+    <string name="navivoice_on">on</string>
+    <string name="navivoice_onto">onto</string>
+    <string name="navivoice_continue">continue</string>
+    <string name="navivoice_leaveround">leave roundabout</string>
+    <string name="navivoice_navend">Navigation end</string>
+    <string name="switch_map_style">Switch map style</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

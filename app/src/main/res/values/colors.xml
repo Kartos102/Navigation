@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="my_primary">#006de1</color>
+    <color name="my_primary_dark">#00796B</color>
+    <color name="my_primary_light">#B2DFDB</color>
+    <color name="my_accent">#FF5722</color>
+    <color name="my_primary_text">#212121</color>
+    <color name="my_secondary_text">#727272</color>
+    <color name="my_icons">#FFFFFF</color>
+    <color name="my_divider">#B6B6B6</color>
+
+    <color name="my_primary_transparent">#4D009688</color>
+    <color name="my_primary_dark_transparent">#9D00796B</color>
+    <color name="my_accent_transparent">#9DFF5722</color>
+    <color name="my_primary_light_transparent">#4DB2DFDB</color>
+
+    <color name="my_polyline_calculate">#9900796B</color>
+    <color name="my_polyline_track">#BF448AFF</color>
+    <color name="my_main_color">#006de1</color>
+    <color name="transparent">#00000000</color>
+
+
+    <color name="my_dark_transparent_bg">#2D000000</color>
+
+    <color name="primary">#009688</color>
+    <color name="primary_dark">#00796B</color>
+    <color name="primary_light">#B2DFDB</color>
+    <color name="accent">#FF5722</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="button_background">#ffffffff</color>
+    <color name="main_text_color">#333333</color>
+    <color name="second_text_color">#555555</color>
+    <color name="bg_f5">#f5f5f5</color>
+</resources>

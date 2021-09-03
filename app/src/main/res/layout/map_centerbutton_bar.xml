@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map_nav_bottom_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical"
+    android:visibility="invisible">
+
+    <!-- Column (just one button) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/speed_sign_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/fab_margin_default"
+            android:background="@drawable/bg_white_border_gray"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/speed_sign_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/speed_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mph" />
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/map_southbar_navicenter_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginLeft="@dimen/fab_margin_default"
+            android:layout_marginTop="@dimen/fab_margin_default"
+            android:layout_marginRight="@dimen/fab_margin_default"
+            android:layout_marginBottom="@dimen/fab_margin_default"
+            android:src="@drawable/ic_location_searching_white_24dp"
+            android:tint="@color/my_secondary_text"
+            android:visibility="visible"
+            app:backgroundTint="@color/button_background" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/nav_bottom_bg_white"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/navtop_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fab_margin_default"
+            android:layout_marginTop="@dimen/fab_margin_default"
+            android:layout_marginRight="@dimen/fab_margin_default"
+            android:layout_marginBottom="@dimen/fab_margin_default"
+            android:src="@drawable/ic_clear_white_24dp"
+            android:tint="@color/my_secondary_text"
+            app:backgroundTint="@color/button_background"
+            app:fabSize="mini" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/navtop_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:text="@string/time"
+                android:textColor="@color/my_icons"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/navtop_arrive_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:text="@string/time"
+                android:textColor="@color/icons"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fab_margin_default"
+            android:layout_marginTop="@dimen/fab_margin_default"
+            android:layout_marginRight="@dimen/fab_margin_default"
+            android:layout_marginBottom="@dimen/fab_margin_default"
+            android:src="@drawable/ic_clear_white_24dp"
+            android:tint="@color/my_secondary_text"
+            android:visibility="invisible"
+            app:backgroundTint="@color/button_background"
+            app:fabSize="mini" />
+    </LinearLayout>
+
+</LinearLayout>

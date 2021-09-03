@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.phial.maps"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 37
+        versionName "3.7"
+    }
+
+    buildTypes {
+        all {
+            minifyEnabled true
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        disable 'InvalidPackage','MissingPrefix','ProtectedPermissions'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat-resources:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0-beta01'
+    implementation 'com.graphhopper:graphhopper-navigation-android-ui:0.1.0-SNAPSHOT'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.jjoe64:graphview:4.2.2'
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    implementation(group: 'com.graphhopper', name: 'graphhopper-core', version: '0.13.0') {
+       exclude group: 'com.google.protobuf', module: 'protobuf-java'
+       exclude group: 'org.openstreetmap.osmosis', module: 'osmosis-osm-binary'
+       exclude group: 'org.apache.xmlgraphics', module: 'xmlgraphics-commons'
+    }
+    implementation 'org.mapsforge:vtm:0.12.0'
+    implementation 'org.mapsforge:vtm-android:0.12.0'
+    implementation 'org.mapsforge:vtm-android:0.12.0:natives-armeabi'
+    implementation 'org.mapsforge:vtm-android:0.12.0:natives-armeabi-v7a'
+    implementation 'org.mapsforge:vtm-android:0.12.0:natives-arm64-v8a'
+    implementation 'org.mapsforge:vtm-android:0.12.0:natives-x86'
+    implementation 'org.mapsforge:vtm-android:0.12.0:natives-x86_64'
+    implementation 'org.mapsforge:vtm-jts:0.12.0'
+    implementation 'org.mapsforge:vtm-themes:0.12.0'
+    //implementation 'com.caverock:androidsvg-aar:1.4'
+
+    implementation 'org.slf4j:slf4j-api:1.7.28'
+    implementation 'org.slf4j:slf4j-android:1.7.28'
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    implementation 'org.conscrypt:conscrypt-android:2.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+}

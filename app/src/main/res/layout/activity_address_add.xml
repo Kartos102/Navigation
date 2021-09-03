@@ -1,0 +1,142 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/addrText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/my_primary_text"
+            android:textSize="22sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/add_address" />
+
+        <ImageView
+            android:id="@+id/addrShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_share_24dp" />
+    </RelativeLayout>
+    
+    <Spinner
+        android:id="@+id/addrSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/addrLine1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="@string/title" />
+
+    <TextView
+        android:id="@+id/addrLineV1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/my_primary_text"
+        android:background="@drawable/my_border"
+        android:textSize="30sp"
+        android:visibility="gone"
+        android:text="" />
+    
+    <EditText
+        android:id="@+id/addrLine2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:hint="@string/add_text" />
+    
+    <TextView
+        android:id="@+id/addrLineV2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/my_primary_text"
+        android:background="@drawable/my_border"
+        android:textSize="20sp"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/addrLine3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:hint="@string/add_text" />
+    
+    <TextView
+        android:id="@+id/addrLineV3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/my_primary_text"
+        android:background="@drawable/my_border"
+        android:textSize="20sp"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/addrLine4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="@string/add_text" />
+
+    <TextView
+        android:id="@+id/addrLineV4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/my_primary_text"
+        android:background="@drawable/my_border"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:text="" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" >
+
+        <EditText
+            android:id="@+id/addrLine5"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/addrOk"
+            android:inputType="textMultiLine"
+            android:maxLines="30"
+            android:hint="@string/add_text" />
+
+        <TextView
+            android:id="@+id/addrLineV5"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/addrOk"
+            android:textColor="@color/my_primary_text"
+            android:background="@drawable/my_border"
+            android:maxLines="30"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:text="" />
+    
+        <Button
+            android:id="@+id/addrOk"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true"
+            android:text="@string/add_address" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+

@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/geoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/my_primary_text"
+        android:textSize="22sp"
+        android:layout_gravity="center"
+        android:text="@string/search_engine" />
+        
+    <Spinner
+        android:id="@+id/geoSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <AutoCompleteTextView
+        android:id="@+id/geoLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="@string/location" />
+    
+    <Button
+        android:id="@+id/geoOk"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/search_location" />
+    
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="15dp"/>
+    
+    <CheckBox android:id="@+id/checkbox_multi_match_only"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="MultiMatchOnly [very slow]"
+        android:onClick="onCheckboxClicked"/>
+    
+    <CheckBox android:id="@+id/checkbox_explicit_search_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="ExplicitSearchText"
+        android:onClick="onCheckboxClicked"/>
+    
+    <View android:id="@+id/lineA"
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:background="#c0c0c0"/>
+    
+    <CheckBox android:id="@+id/checkbox_city_nodes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="CityNodes"
+        android:onClick="onCheckboxClicked"/>
+    
+    <CheckBox android:id="@+id/checkbox_street_nodes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="StreetNodes [slow]"
+        android:onClick="onCheckboxClicked"/>
+    
+    <View android:id="@+id/lineB"
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:background="#c0c0c0"/>
+
+</LinearLayout>
+
+

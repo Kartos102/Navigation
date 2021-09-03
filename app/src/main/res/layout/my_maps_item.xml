@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+    >
+
+    <RelativeLayout
+        android:id="@+id/my_maps_item_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/my_maps_item_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/fab_margin_right_left"
+            android:layout_marginTop="@dimen/fab_margin_top_bottom"
+            android:layout_marginRight="@dimen/fab_margin_right_left"
+            android:layout_marginBottom="@dimen/fab_margin_top_bottom"
+            android:src="@drawable/ic_map_white_24dp"
+            app:backgroundTint="@color/my_main_color"
+            app:fabSize="mini" />
+
+        <TextView
+            android:id="@+id/my_maps_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/my_maps_item_flag"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/my_primary_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/my_maps_item_download_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="8dp"
+            android:textColor="@color/my_primary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/my_maps_item_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_maps_item_name"
+            android:layout_toRightOf="@id/my_maps_item_flag"
+            android:textColor="@color/my_secondary_text"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/my_maps_item_continent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/my_maps_item_name"
+            android:paddingRight="8dp"
+            android:textColor="@color/my_secondary_text"
+            android:textSize="14sp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/my_maps_item_flag"
+            android:layout_marginTop="8dp"
+            android:background="@color/my_divider"/>
+    </RelativeLayout>
+
+</RelativeLayout>

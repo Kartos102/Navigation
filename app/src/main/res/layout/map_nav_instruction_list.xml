@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_instruction_list_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_divider"
+    android:fontFamily="sans-serif"
+    android:visibility="invisible">
+
+    <RelativeLayout
+        android:id="@+id/nav_instruction_list_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_icons"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="28dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/points_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nav_instruction_list_control" />
+
+        <RelativeLayout
+            android:id="@+id/nav_instruction_list_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical">
+
+            <ImageButton
+                android:id="@+id/nav_settings_foot_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_directions_walk_white_24dp"
+                android:tint="@color/my_main_color" />
+
+            <ImageButton
+                android:id="@+id/nav_settings_bike_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/nav_settings_foot_btn2"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_directions_bike_white_24dp"
+                android:tint="@color/my_main_color" />
+
+            <ImageButton
+                android:id="@+id/nav_settings_car_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/nav_settings_bike_btn2"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_directions_car_white_24dp"
+                android:tint="@color/my_main_color" />
+
+
+            <ImageButton
+                android:id="@+id/nav_instruction_list_clear_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_keyboard_arrow_down_white_24dp"
+                android:tint="@color/my_main_color" />
+
+        </RelativeLayout>
+
+        <!--from-->
+
+        <!--to-->
+
+        <!--distance and time-->
+        <RelativeLayout
+            android:id="@+id/nav_instruction_list_dis_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/points_recyclerview"
+            android:gravity="left|center_vertical">
+
+            <!--distance-->
+            <ImageView
+                android:id="@+id/nav_instruction_list_distance_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="16dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_space_bar_white_24dp"
+                android:tint="@color/my_main_color" />
+
+            <TextView
+                android:id="@+id/nav_instruction_list_distance_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/nav_instruction_list_distance_iv"
+                android:text="@string/distance"
+                android:textColor="@color/second_text_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/nav_instruction_list_summary_distance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nav_instruction_list_distance_text_view"
+                android:layout_toRightOf="@+id/nav_instruction_list_distance_iv"
+                android:text="99999.999 km"
+                android:textColor="@color/main_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!--time-->
+            <TextView
+                android:id="@+id/nav_instruction_list_time_text_view"
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/time"
+                android:textColor="@color/second_text_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/nav_instruction_list_summary_time_tv"
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nav_instruction_list_time_text_view"
+                android:layout_alignParentRight="true"
+                android:text="000:00 h:m"
+                android:textColor="@color/main_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/nav_instruction_list_time_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@id/nav_instruction_list_time_text_view"
+                android:padding="8dp"
+                android:src="@drawable/ic_timer_white_24dp"
+                android:tint="@color/my_main_color" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--A RecyclerView with some commonly used attributes-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/nav_instruction_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/nav_buttons"
+        android:layout_below="@id/nav_instruction_list_summary"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:id="@+id/nav_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/button_background"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/nav_instruction_list_stop_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/button_background"
+            android:text="@string/cancel"
+            android:textColor="@color/my_main_color" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/main_text_color" />
+
+        <Button
+            android:id="@+id/nav_instruction_list_start_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/button_background"
+            android:text="@string/nav_start"
+            android:textColor="@color/my_main_color" />
+    </LinearLayout>
+</RelativeLayout>
